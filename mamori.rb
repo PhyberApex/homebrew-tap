@@ -5,21 +5,21 @@
 class Mamori < Formula
   desc "Concurrent HTTP security header scanner"
   homepage "https://github.com/PhyberApex/mamori"
-  version "1.1.0"
+  version "1.2.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/PhyberApex/mamori/releases/download/v1.1.0/mamori_darwin_amd64.tar.gz"
-      sha256 "8832dc40ed4e15cf06e7a103ff84827aef59748069471e578b3b484919d54cc3"
+      url "https://github.com/PhyberApex/mamori/releases/download/v1.2.0/mamori_darwin_amd64.tar.gz"
+      sha256 "b45752bf9d73aee6992c7e31adcd74c587c38822558994f0d2fe9b756e2f5c01"
 
       define_method(:install) do
         bin.install "mamori"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/PhyberApex/mamori/releases/download/v1.1.0/mamori_darwin_arm64.tar.gz"
-      sha256 "21d8aa4b7ee319c761b17bd56577dbb733b0475c922981f3a9de1a679fe7ac1f"
+      url "https://github.com/PhyberApex/mamori/releases/download/v1.2.0/mamori_darwin_arm64.tar.gz"
+      sha256 "086fe18b7d5a22ff25bd3cf645791487704fc0a87469e0109c999b869cbc88e5"
 
       define_method(:install) do
         bin.install "mamori"
@@ -29,15 +29,15 @@ class Mamori < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/PhyberApex/mamori/releases/download/v1.1.0/mamori_linux_amd64.tar.gz"
-      sha256 "5851ce567e9261700b4514914e3d9de77df2d466dd51f2d0c0c8811f219f4d8f"
+      url "https://github.com/PhyberApex/mamori/releases/download/v1.2.0/mamori_linux_amd64.tar.gz"
+      sha256 "7fff3512e6e2a36ec685b2e928640dd1e9592bbf38c5b23a0a77f2016eec5512"
       define_method(:install) do
         bin.install "mamori"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/PhyberApex/mamori/releases/download/v1.1.0/mamori_linux_arm64.tar.gz"
-      sha256 "190dbdf0c1b831fc17e755107ddee2f6d0144e515f5e4e78fa9750d69807e567"
+      url "https://github.com/PhyberApex/mamori/releases/download/v1.2.0/mamori_linux_arm64.tar.gz"
+      sha256 "5d6cd73a3e48a264f78b02cfa90f9b4a9e31d8b7ddff922d8fdff6f9b1b4baa3"
       define_method(:install) do
         bin.install "mamori"
       end
